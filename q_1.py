@@ -1,4 +1,3 @@
-
 import util
 
 if __name__ == '__main__':
@@ -8,5 +7,3 @@ if __name__ == '__main__':
     for json_data in jsons:
         text = util.get_loaction(json_data)
         print(text)
-
-
