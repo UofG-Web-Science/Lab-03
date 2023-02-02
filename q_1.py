@@ -5,5 +5,9 @@ if __name__ == '__main__':
     jsons = util.load_jsons(data_dir_path)
     texts = []
     for json_data in jsons:
-        text = util.get_loaction(json_data)
-        print(text)
+        location = util.extract_location(json_data)
+        geo_enabled = util.extract_enabled(json_data)
+        coordinate = util.extract_coordinate(json_data)
+        place = util.extract_place(json_data)
+
+        print(location)
