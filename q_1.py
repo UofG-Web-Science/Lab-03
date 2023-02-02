@@ -9,5 +9,4 @@ if __name__ == '__main__':
         geo_enabled = util.extract_enabled(json_data)
         coordinate = util.extract_coordinate(json_data)
         place = util.extract_place(json_data)
-
-        print(location)
+        print(location, geo_enabled, coordinate, place)

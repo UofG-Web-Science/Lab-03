@@ -38,13 +38,9 @@ def extract_coordinate(json_data):
     return coordinate
 
 
-def calc_distance(box):
+def calc_distance_bbox(bbox):
     R = 6373.0
-    lon_1, lat_1, lon_2, lat_2 = box
-    # lat_1 = box[1]
-    # lon_1 = box[0]
-    # lat_2 = box[3]
-    # lon_2 = box[2]
+    lon_1, lat_1, lon_2, lat_2 = bbox
 
     phi_1 = lat_1 * (math.pi / 180)
     phi_2 = lat_2 * (math.pi / 180)
@@ -59,8 +55,7 @@ def calc_distance(box):
     return dis
 
 
-def calc_distance(city1, city2):
+def calc_distance_point(city1, city2):
     dis = haversine(city1, city2)
 
     return dis
-
